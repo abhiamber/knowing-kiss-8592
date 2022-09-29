@@ -34,7 +34,9 @@ function Signup() {
         }
         // console.log(res)
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        alert(err.message)
+        console.log(err)});
   }
 
   if (AuthState.isAuth) {
@@ -192,6 +194,7 @@ function Signup() {
           </form>
         </div>
       </div>
+      
     </div>
   );
 }

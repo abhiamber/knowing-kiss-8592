@@ -1,0 +1,34 @@
+.footer{
+    background-color: rgb(43, 182, 115);
+}
+
+
+
+.footerup{
+width: 80%;
+margin: auto;
+    display:flex;
+    gap: 10px;
+    text-align: justify;
+    font-size: 15px;
+    color: whitesmoke;
+}
+.general>ul>li,.Features>ul>li,.SocialMedia>ul>li,.Mobile>ul>li,.PetFindermy>ul>li{
+
+    list-style: none;
+    font-size: 13px;
+}
+.footerup>div>p{
+    margin-left: 40px;
+    font-size: 20px;
+    margin-bottom: -15px;
+    
+}
+.copyright{
+    color: white;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.copyright>p{
+    margin-bottom: -15px;
+}

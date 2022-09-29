@@ -1,0 +1,51 @@
+{
+
+"food":[
+
+{ "url" :"https://www.kindmeal.my/photos/deal/7/700-4802-m.jpg",  "id":1,
+
+"title":"Lush Comfort Food, 20% Off — Lush Cafe"
+
+},
+
+{"url":"https://www.kindmeal.my/photos/deal/5/579-4524-m.jpg","id":2,
+"title":"Tasty Midas Touch, 15% Off — Midas Cuisine"
+
+},
+{"url":"https://www.kindmeal.my/photos/deal/7/708-4923-m.jpg","id":3,
+"title":"Nature Dining, 10% Off — Camp Forest"
+},
+{"url":"https://www.kindmeal.my/photos/deal/6/698-4639-m.jpg","id":4,
+"title":"Nutritious Meets Delicious, 10% Off — Wise Crafters"
+},
+{"url":"https://www.kindmeal.my/photos/deal/6/666-4145-m.jpg","id":5,
+"title":"Authentic Taste of Hong Kong, 30% Off — Prince Cuisine"
+},
+{"url":"https://www.kindmeal.my/photos/deal/7/710-4998-m.jpg","id":6,
+"title":"Tasty Waffles, Tarts & Farsan, 15% Off — WTF Cafe - Waffles.Tarts.Farsan"
+},
+
+{"url":"https://www.kindmeal.my/photos/deal/7/710-4998-m.jpg","id":7,
+"title":"Bingsu & Desserts, 10% Off — BINGS"
+}
+
+],
+
+"logo":[
+
+{"url":"https://www.kindmeal.my/photos/shop/4/459-2975-m.jpg","id":1},
+{"url":"https://www.kindmeal.my/photos/shop/5/592-4483-m.jpg","id":2},
+
+{"url":"https://www.kindmeal.my//photos/shop/6/603-4533-m.jpg","id":3},
+
+{"url":"https://www.kindmeal.my//photos/shop/5/591-4421-m.jpg","id":4},
+
+{"url":"https://www.kindmeal.my//photos/shop/5/547-4031-m.jpg","id":5},
+{"url":"https://www.kindmeal.my//photos/shop/6/606-4681-m.jpg","id":6},
+{"url":"https://www.kindmeal.my/photos/shop/6/626-4816-m.jpg","id":7}
+
+
+]
+
+
+}

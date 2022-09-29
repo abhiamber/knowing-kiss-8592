@@ -4,9 +4,9 @@ import style from '../style/Navbar.module.css'
 function Navbar(){
 
    
-return <div    >
+return <div className={style.Navbar}>
 
-<ul  style={{display:"flex",gap:"20px",margin:"30px"}} >
+<ul>
 
 <li> <Link  to="/" >Home</Link> </li>
 

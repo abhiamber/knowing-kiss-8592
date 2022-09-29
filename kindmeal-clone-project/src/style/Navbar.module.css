@@ -1,0 +1,25 @@
+.Navbar {
+  height: auto;
+  font-size: 20px;
+  background-color: rgb(43, 182, 115);
+}
+
+.Navbar > ul {
+  width: 80%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 7px 0;
+
+}
+.Navbar > ul > li > a {
+  text-decoration: none;
+  color: rgb(241, 224, 224);
+}
+
+.Navbar > ul > li > a:hover{
+
+    color: white;
+}
