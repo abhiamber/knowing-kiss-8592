@@ -1,0 +1,17 @@
+
+
+.card{
+display: grid;
+grid-template-columns: repeat(3,300px);
+gap: 50px;
+justify-content: center;
+margin: 25px 0;
+
+}
+.card>div{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card>div>img:nth-child(1){
+    width: 100%;
+}
