@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { useSearchParams } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom"
 import style from '../style/MealsDeals.module.css'
 
 
@@ -39,14 +39,16 @@ if(!abhi){
   let ref=useRef(null)
 
   async function getData() {
-    let key = "da04427490fc41aea388dae1a6eb4135";
+    // let key = "da04427490fc41aea388dae1a6eb4135";
+    // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
+    let key3="66992366aeb3479ca4024dd1e9a4c662"
 
     await axios
       .get(
-        `https://api.spoonacular.com/food/search?query=${item}&diet=Whole30&offset=${page}&number=15&apiKey=${key}`
+        `https://api.spoonacular.com/food/search?query=${item}&titleMatch&diet=Whole30&offset=${page}&number=15&apiKey=${key3}`
       )
       .then((res) => {
-        // console.log(res.data.searchResults[0]);
+        console.log(res.data);
         ref.current=res.data.searchResults[0].totalResults
         setData(res.data.searchResults[0].results);
       })
@@ -63,7 +65,7 @@ if(!abhi){
 
   useEffect(() => {
     getData();
-  }, [page]);
+  }, [ ]);
 
 
 
@@ -101,7 +103,7 @@ if(!abhi){
     
     {data.length!==0? data.map(item=>{
         
-        return <div key={item.id}   >
+        return   <Link to={`/mealdeals/${item.name}`} key={item.id}> <div    >
         
         <img src={item.image} alt=""/>
         <p>{item.name}</p>
@@ -110,6 +112,8 @@ if(!abhi){
         <img src="https://www.kindmeal.my/images/icon_alcohol_disabled.png" alt="" />
         
         </div>
+        </Link>
+
     }):<h3>items not available</h3>}
     
     </div>

@@ -4,17 +4,17 @@ import style from '../style/Hot.module.css'
 
 
 
-
+// const header = new Headers({ "Access-Control-Allow-Origin": "*" });
 function HotPicks(){
 
     let [data,setData]=useState([])
 
    async function getData(){
 
-    await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood`)
+    await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=seafood`,)
     .then((res)=>{
 
-        // console.log(res.data.meals)
+        console.log(res.data.meals)
 
             setData(res.data.meals)
     })

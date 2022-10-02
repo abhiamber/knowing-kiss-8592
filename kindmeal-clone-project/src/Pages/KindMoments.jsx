@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-    import axios from "axios"
+ import axios from "axios"
 import { useEffect, useState } from "react"
 import style from '../style/Kind.module.css'
 
