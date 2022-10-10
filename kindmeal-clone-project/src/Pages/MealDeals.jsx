@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Link, useSearchParams } from "react-router-dom"
@@ -49,7 +50,7 @@ if(!abhi){
         `https://api.spoonacular.com/food/search?query=${item}&titleMatch&diet=Whole30&offset=${page}&number=15&apiKey=${key4}`
       )
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         ref.current=res.data.searchResults[0].totalResults
         setData(res.data.searchResults[0].results);
       })

@@ -5,7 +5,7 @@ function MealChild(){
 let [data,setData]=useState()
     let {id}=useParams()
 
-console.log(id)
+// console.log(id)
 
     async function getData() {
             // let key = "da04427490fc41aea388dae1a6eb4135";
@@ -18,7 +18,7 @@ console.log(id)
             `https://api.spoonacular.com/recipes/complexSearch?id=${id}&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key4}`
           )
           .then((res) => {
-            console.log(res.data.results);
+            // console.log(res.data.results);
             setData(res.data.results);
           })
     
@@ -30,6 +30,7 @@ console.log(id)
     
       useEffect(() => {
         getData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [id]);
     
     if(data===undefined){

@@ -54,7 +54,7 @@ if(!abhi){
       `https://api.spoonacular.com/recipes/complexSearch?query=${item}&offset=${page}&number=30&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key4}`
     )
       .then((res) => {
-        console.log(res.data.results);
+        // console.log(res.data.results);
         // console.log(res.data.results.usedIngredients)
         ref.current=res.data.totalResults
         setData(res.data.results);
@@ -71,6 +71,7 @@ if(!abhi){
 
   useEffect(() => {
     getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
 
@@ -79,13 +80,14 @@ if(!abhi){
 
     setSearchParams({page,item})
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[page,item])
 
   // console.log( inittialValue)
-  if(data){
-    // console.log(data.analyzedInstructions)
+  // if(data){
+  //   // console.log(data.analyzedInstructions)
 
-  }
+  // }
 
 
   return (

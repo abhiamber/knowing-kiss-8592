@@ -14,9 +14,9 @@ return <div className={style.Navbar}>
 <li> <Link  to="/kindmoments" >KindMoments</Link> </li>
 <li> <Link  to="/hotpicks" >Hot Picks</Link> </li>
 <li> <Link  to="/recipes" >Recipes</Link> </li>
-<li> <Link  to="/directory" >Directory</Link> </li>
-<li> <Link  to="/articles" >Articles</Link> </li>
-<li> <Link  to="/help" >Help</Link> </li>
+<li> <Link  to="/" >Directory</Link> </li>
+<li> <Link  to="/" >Articles</Link> </li>
+<li> <Link  to="/" >Help</Link> </li>
 
 
 
