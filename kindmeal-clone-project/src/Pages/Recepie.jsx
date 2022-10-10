@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { Link, useSearchParams } from "react-router-dom"
+import {useSearchParams } from "react-router-dom"
 import style from '../style/MealsDeals.module.css'
 
 
@@ -26,7 +26,7 @@ function MealDeals() {
   let inittialValue=getValueFromURL(searchParams.get("page"))
 let abhi=searchParams.get("item")
 if(!abhi){
-  abhi="Whole30"
+  abhi="pasta"
 }
 // console.log(abhi)
 
@@ -39,9 +39,11 @@ if(!abhi){
   let ref=useRef(null)
 
   async function getData() {
-    // let key = "da04427490fc41aea388dae1a6eb4135";
+    // let key = "915e9a9b1dfd44cd9d2566032da7f5eb";
     // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
-    let key3="66992366aeb3479ca4024dd1e9a4c662"
+    // let key3="66992366aeb3479ca4024dd1e9a4c662"
+    let key4="5318de1dc92041388302c621904dcb3f"
+
 
 
     
@@ -49,12 +51,13 @@ if(!abhi){
      
     await axios
     .get(
-      `https://api.spoonacular.com/recipes/complexSearch?query=${item}&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key3}`
+      `https://api.spoonacular.com/recipes/complexSearch?query=${item}&offset=${page}&number=30&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key4}`
     )
       .then((res) => {
-        console.log(res.data);
-        ref.current=res.data.searchResults[0].totalResults
-        setData(res.data.searchResults[0].results);
+        console.log(res.data.results);
+        // console.log(res.data.results.usedIngredients)
+        ref.current=res.data.totalResults
+        setData(res.data.results);
       })
 
       .catch((err) => console.log(err));
@@ -62,14 +65,13 @@ if(!abhi){
 
 
 
-  function handleSubmit(e){
-    e.preventDefault()
+  function handleSubmit(){
     getData()
   }
 
   useEffect(() => {
     getData();
-  }, [ ]);
+  }, [page]);
 
 
 
@@ -80,47 +82,54 @@ if(!abhi){
   },[page,item])
 
   // console.log( inittialValue)
+  if(data){
+    // console.log(data.analyzedInstructions)
+
+  }
+
 
   return (
     <div className={style.container} >
+    <input placeholder="Search Here"  value={item} onChange={(e)=> setItem(e.target.value)} />
+    <button  onClick={handleSubmit} >Search</button>
+  <br/>
+<button disabled={page===1} onClick={()=>setPage(page-1)} >Prev</button>
+<button   >{page}</button>
+<button  onClick={()=>setPage(page+1)}  disabled={page===ref.current} >Next</button>
 
-    <div  className={style.form}>
 
-    <form onSubmit={handleSubmit} >
-    <input placeholder="Seacrh By Name" onChange={(e)=>setItem(e.target.value)}  />    
 
-    <input type="submit" value="Search Deals" />
+  <div className="receipe"  style={{display:"grid",gridTemplatesColumn:"200px 200px"}}>
+
+
+  {data? data.map(item=>{
+
+    return  <div key={item.id} >
     
-    </form>
+    <img src={item.image} alt="" />
+    <h4>{item.title}</h4>
+     <h4>readyInMinutes-{item.readyInMinutes}</h4>
+
+     <div>  
+     
+     
+     </div>
+
+     <div>
+
+     </div>
+
     
-    </div>
-
-    <div>
-    <button disabled={page===1}  onClick={()=>setPage(page-1)} >Prev</button>
-    <button>{page}</button>
-    <button disabled={page===ref.current} onClick={()=>setPage(page+1)}  >Next</button>
-    
-    </div>
-
-
-    <div className={style.card} >
-    
-    {data.length!==0? data.map(item=>{
-        
-        return   <Link to={`/mealdeals/${item.name}`} key={item.id}> <div    >
-        
-        <img src={item.image} alt=""/>
-        <p>{item.name}</p>
-        <img src="https://www.kindmeal.my/images/icon_egg.png" alt=""/>
-        <img src="https://www.kindmeal.my/images/icon_egg.png"  alt=""/>
-        <img src="https://www.kindmeal.my/images/icon_alcohol_disabled.png" alt="" />
-        
-        </div>
-        </Link>
-
-    }):<h3>items not available</h3>}
     
     </div>
+  }):null}
+
+
+  
+  
+  </div>
+
+
 
 
     </div>

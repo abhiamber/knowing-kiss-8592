@@ -13,9 +13,7 @@ function Home() {
   let [index, setIndex] = useState(0);
   let ref = useRef(null);
 
-  if (index > 5) {
-    setIndex(0);
-  }
+  
 
   useEffect(() => {
     return clearInterval(ref.current);
@@ -23,8 +21,14 @@ function Home() {
 
   function getImage() {
     ref.current = setInterval(() => {
-      setIndex((prev) => prev + 1);
-    }, 6500);
+      setIndex((prev) => {
+
+        if (prev > 5) {
+          prev=0
+        }
+        // console.log(prev)
+        return prev + 1});
+    }, 4500);
   }
 
   useEffect(() => {

@@ -10,11 +10,12 @@ console.log(id)
     async function getData() {
             // let key = "da04427490fc41aea388dae1a6eb4135";
     // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
-    let key3="66992366aeb3479ca4024dd1e9a4c662"
+    // let key3="66992366aeb3479ca4024dd1e9a4c662"
+    let key4="5318de1dc92041388302c621904dcb3f"
     
         await axios
           .get(
-            `https://api.spoonacular.com/recipes/complexSearch?id=${id}&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key3}`
+            `https://api.spoonacular.com/recipes/complexSearch?id=${id}&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key4}`
           )
           .then((res) => {
             console.log(res.data.results);

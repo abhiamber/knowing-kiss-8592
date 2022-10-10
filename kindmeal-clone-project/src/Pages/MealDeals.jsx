@@ -39,13 +39,14 @@ if(!abhi){
   let ref=useRef(null)
 
   async function getData() {
-    // let key = "da04427490fc41aea388dae1a6eb4135";
+    // let key = "915e9a9b1dfd44cd9d2566032da7f5eb";
     // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
-    let key3="66992366aeb3479ca4024dd1e9a4c662"
+    // let key3="66992366aeb3479ca4024dd1e9a4c662"
+    let key4="5318de1dc92041388302c621904dcb3f"
 
     await axios
       .get(
-        `https://api.spoonacular.com/food/search?query=${item}&titleMatch&diet=Whole30&offset=${page}&number=15&apiKey=${key3}`
+        `https://api.spoonacular.com/food/search?query=${item}&titleMatch&diet=Whole30&offset=${page}&number=15&apiKey=${key4}`
       )
       .then((res) => {
         console.log(res.data);
@@ -65,7 +66,7 @@ if(!abhi){
 
   useEffect(() => {
     getData();
-  }, [ ]);
+  }, [page ]);
 
 
 
