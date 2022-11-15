@@ -162,7 +162,7 @@ function Signup() {
             </label>
             <br />
             Username{" "}
-            <input
+            <input  className={style.input}
               style={{
                 padding: "8px",
                 position: "relative",
@@ -173,7 +173,7 @@ function Signup() {
               }}
             />
             <br />
-            <input type="checkbox" style={{ marginTop: "30px" }} />
+            <input type="checkbox" style={{ marginTop: "25px" }} />
             <label> I agree to KindMeal.my's Merchant Terms & Conditions</label>
             <br />
             <input

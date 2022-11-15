@@ -1,7 +1,6 @@
 
 
 .singupform{
-
     display: flex;
 width: 70%;    
 margin: auto;
@@ -22,3 +21,33 @@ text-align: center;
 gap: 30px;
 
 }
+.input{
+  padding:8px ;
+  position: relative;
+  width: 490px;
+  border-radius:5px ;
+  left: 6px;
+  -webkit-border-radius:5px ;
+  -moz-border-radius:5px ;
+  -ms-border-radius:5px ;
+  -o-border-radius:5px ;
+}
+
+
+@media (min-width: 150px) and (max-width: 450px) {
+
+    .formDetails,.singupform{
+        flex-wrap: wrap;
+    }
+
+   
+  }
+
+  @media (min-width: 450px) and (max-width: 950px) {
+
+    .formDetails,.singupform{
+        flex-wrap: wrap;
+    }
+
+  
+  }

@@ -74,7 +74,7 @@ function Header() {
             navigate("/signup")}}
         
         >
-          <div className="image">
+          <div className={style.image}>
             <img src="https://www.kindmeal.my/images/join_normal.png" alt="" />
           </div>
           <div className="content">
@@ -93,7 +93,7 @@ function Header() {
             navigate("/signup")}} 
         
         >
-          <div className="image">
+          <div className={style.image}>
             <img src="https://www.kindmeal.my/images/join_shop.png" alt="" />
           </div>
           <div className="content">

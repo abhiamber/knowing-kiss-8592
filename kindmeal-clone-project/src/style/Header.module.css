@@ -15,6 +15,7 @@ background-color: white;
 .FoodLover{
     margin:"auto";
     width:"50%";
+    /* flex-wrap: wrap; */
     margin: 18px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -29,6 +30,7 @@ background-color: white;
     margin:"auto";
     width:"50%";
     margin: 18px;
+    /* flex-wrap: wrap; */
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     -webkit-border-radius: 20px;
@@ -110,6 +112,25 @@ width: 80%;
     .social{
         margin: auto;
     }
+    .FoodLover{
+        flex-wrap: wrap;
+    }
+    .Restaurant{
+        flex-wrap: wrap;
+    }
+    .image{
+        margin: auto;
+    }
+
+
+    
+.popup{
+    left: 110px;
+    top: 200px;
+  
+    
+    }
+  
 
    }
 
@@ -124,8 +145,30 @@ width: 80%;
     } 
     .social{
         margin: auto;
-    }  
-  
+    } 
+
+    .FoodLover{
+        flex-wrap: wrap;
+    }
+    .Restaurant{
+        flex-wrap: wrap;
+    }
+    
+    
+.popup{
+    flex-direction: column;
+    position: absolute;
+    left: 220px;
+    top: 200px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    z-index: 100;
+    background-color: white;
+    
+    }
+    .image{
+        margin: auto;
+    }
   
   }
 
