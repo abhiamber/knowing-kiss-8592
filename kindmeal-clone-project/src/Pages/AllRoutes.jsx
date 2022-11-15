@@ -3,7 +3,7 @@ import MealDeals from "./MealDeals"
 import Home from "./Home"
 import Singup from "./Signup"
 import HotPicks from './HotPicks'
-import Recepie from "./Recepie"
+import Recepie from "../style/Recepie"
 import KindMoments from "./KindMoments"
 import MealChild from "./MealChild"
 

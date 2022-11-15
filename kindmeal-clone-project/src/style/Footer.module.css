@@ -10,6 +10,7 @@ margin: auto;
     display:flex;
     gap: 10px;
     text-align: justify;
+    flex-wrap: wrap;
     font-size: 15px;
     color: whitesmoke;
 }

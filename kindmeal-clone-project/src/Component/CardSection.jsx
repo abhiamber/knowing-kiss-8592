@@ -73,7 +73,7 @@ function CardSection(){
 
 <h3  style={{fontSize:"25px",color:"GrayText"}} >Featured On</h3>
 
-<img src="https://www.kindmeal.my/images/media-feature2.png"  alt="" />
+<img src="https://www.kindmeal.my/images/media-feature2.png" width="100%" alt="" />
 
 </div>
 

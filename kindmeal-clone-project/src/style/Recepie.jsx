@@ -34,6 +34,7 @@ if(!abhi){
   let [data, setData] = useState([]);
   let [item,setItem]=useState(abhi)
   let [page,setPage]=useState(inittialValue)
+  let [steps,setSteps]=useState([])
 
 
   let ref=useRef(null)
@@ -42,22 +43,18 @@ if(!abhi){
     // let key = "915e9a9b1dfd44cd9d2566032da7f5eb";
     // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
     // let key3="66992366aeb3479ca4024dd1e9a4c662"
-    let key4="5318de1dc92041388302c621904dcb3f"
-
-
-
-    
-
+    let key4="5318de1dc92041388302c621904dcb3f"    
      
     await axios
     .get(
-      `https://api.spoonacular.com/recipes/complexSearch?query=${item}&offset=${page}&number=30&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key4}`
+      `https://api.spoonacular.com/recipes/complexSearch?query=${item}&offset=${page}&number=1&maxFat=25&addRecipeInformation=true&addRecipeNutrition=true&apiKey=${key4}`
     )
       .then((res) => {
-        // console.log(res.data.results);
+        // console.log(res.data.results[0].analyzedInstructions[0].steps);
         // console.log(res.data.results.usedIngredients)
         ref.current=res.data.totalResults
         setData(res.data.results);
+        setSteps(res.data.results[0].analyzedInstructions[0].steps)
       })
 
       .catch((err) => console.log(err));
@@ -92,7 +89,7 @@ if(!abhi){
 
   return (
     <div className={style.container} >
-    <input placeholder="Search Here"  value={item} onChange={(e)=> setItem(e.target.value)} />
+    <input placeholder="Search Here"   onChange={(e)=> setItem(e.target.value)} />
     <button  onClick={handleSubmit} >Search</button>
   <br/>
 <button disabled={page===1} onClick={()=>setPage(page-1)} >Prev</button>
@@ -106,25 +103,24 @@ if(!abhi){
 
   {data? data.map(item=>{
 
-    return  <div key={item.id} >
+    return  <div key={item.id} style={{textAlign:"center",width:"80%",margin:"auto" }} >
     
     <img src={item.image} alt="" />
     <h4>{item.title}</h4>
-     <h4>readyInMinutes-{item.readyInMinutes}</h4>
-
-     <div>  
-     
-     
-     </div>
-
-     <div>
-
-     </div>
-
-    
-    
+     <h4>readyInMinutes-{item.readyInMinutes}</h4>    
+        
     </div>
   }):null}
+
+  {
+
+    steps.map((elem,index)=>{
+      return <div  key={index+1}  style={{textAlign:"justify",width:"80%",margin:"auto" }}>    
+           <p  > {index+1}:---  {elem.step}</p>
+      
+      </div>
+    })
+  }
 
 
   

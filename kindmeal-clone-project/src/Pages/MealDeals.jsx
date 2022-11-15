@@ -42,15 +42,15 @@ if(!abhi){
   async function getData() {
     // let key = "915e9a9b1dfd44cd9d2566032da7f5eb";
     // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
-    // let key3="66992366aeb3479ca4024dd1e9a4c662"
-    let key4="5318de1dc92041388302c621904dcb3f"
+    let key3="66992366aeb3479ca4024dd1e9a4c662"
+    // let key4="5318de1dc92041388302c621904dcb3f"
 
     await axios
       .get(
-        `https://api.spoonacular.com/food/search?query=${item}&titleMatch&diet=Whole30&offset=${page}&number=15&apiKey=${key4}`
+        `https://api.spoonacular.com/food/search?query=${item}&titleMatch&diet=Whole30&offset=${page}&number=15&apiKey=${key3}`
       )
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data.searchResults[0].results);
         ref.current=res.data.searchResults[0].totalResults
         setData(res.data.searchResults[0].results);
       })
@@ -105,10 +105,10 @@ if(!abhi){
     
     {data.length!==0? data.map(item=>{
         
-        return   <Link to={`/mealdeals/${item.name}`} key={item.id}> <div    >
+        return   <Link to={`/mealdeals/${item.name}`} key={item.id} style={{ textDecoration: "none",color:"teal",fontSize:"22px"}}> <div    >
         
-        <img src={item.image} alt=""/>
-        <p>{item.name}</p>
+        <img src={item.image} alt="" className={style.mainImage}/>
+        <p   >{item.name}</p>
         <img src="https://www.kindmeal.my/images/icon_egg.png" alt=""/>
         <img src="https://www.kindmeal.my/images/icon_egg.png"  alt=""/>
         <img src="https://www.kindmeal.my/images/icon_alcohol_disabled.png" alt="" />

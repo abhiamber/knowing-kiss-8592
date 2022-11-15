@@ -25,7 +25,7 @@ function Header() {
   return (
     <div className={style.headermain} >
       <div   className={style.header}  >
-        <div className="logo">
+        <div className={style.logo}>
           <Link to="/">
             <img
               src="https://www.kindmeal.my/images/logo-kindmeal.png"

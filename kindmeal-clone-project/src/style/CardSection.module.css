@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     gap: 30px;
     text-align: center;
+    flex-wrap: wrap;
     color: gray;
     margin-bottom: 70px;
 }
@@ -49,4 +50,9 @@
 .button>a{
     text-decoration: none;
     color: white;
+}
+
+
+.logo1{
+    width: 90%;
 }

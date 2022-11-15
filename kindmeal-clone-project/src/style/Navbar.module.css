@@ -9,6 +9,8 @@
   margin: auto;
 
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   list-style: none;
   padding: 7px 0;

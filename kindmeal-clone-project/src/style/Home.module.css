@@ -65,3 +65,25 @@ margin: auto;
 
     width: 100%;
 }
+
+
+@media (min-width: 150px) and (max-width: 450px) {
+
+    .posterpiece{
+        display: flex;
+        gap: 20px;
+        padding: 18px;
+        padding-top: 20px;
+    }
+  }
+
+  @media (min-width: 450px) and (max-width: 950px) {
+
+    .posterpiece{
+        display: flex;
+        gap: 20px;
+        padding: 18px;
+        padding-top: 20px;
+
+    }
+  }

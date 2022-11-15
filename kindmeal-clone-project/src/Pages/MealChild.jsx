@@ -1,6 +1,8 @@
 import {useParams} from  'react-router-dom'
 import axios from 'axios';
 import { useState ,useEffect} from 'react';
+
+
 function MealChild(){
 let [data,setData]=useState()
     let {id}=useParams()
@@ -10,20 +12,26 @@ let [data,setData]=useState()
     async function getData() {
             // let key = "da04427490fc41aea388dae1a6eb4135";
     // let key2="d28ef1bc4f3c49c2af604ba1075e472e"
-    // let key3="66992366aeb3479ca4024dd1e9a4c662"
-    let key4="5318de1dc92041388302c621904dcb3f"
+    let key3="66992366aeb3479ca4024dd1e9a4c662"
+    // let key4="5318de1dc92041388302c621904dcb3f"
     
-        await axios
+       let res= await axios
           .get(
-            `https://api.spoonacular.com/recipes/complexSearch?id=${id}&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key4}`
+            `https://api.spoonacular.com/recipes/complexSearch?id=${id}&maxFat=25&includeIngredients=cheese&addRecipeInformation=true&fillIngredients=true&addRecipeNutrition=true&apiKey=${key3}`
           )
-          .then((res) => {
-            // console.log(res.data.results);
-            setData(res.data.results);
-          })
-    
-          .catch((err) => console.log(err));
-      }
+          try{
+            // console.log(res.data.results)
+            let data=res.data.results
+
+            setData(data);
+          }
+          catch(err){
+            console.log(err)
+          }
+
+        }
+          
+        
     
     
     
@@ -38,7 +46,7 @@ let [data,setData]=useState()
       return <h2>......Loading</h2>
     }
 
-return <div style={{marginTop:"50px"}} >
+return <div style={{margin:"auto",width:"40%",}} >
 
 
 
@@ -64,12 +72,12 @@ return <div style={{marginTop:"50px"}} >
     
     {item.nutrition.nutrients.map(item=>{
 
-      return <span  key={item.name} style={{fontSize:"20px",textAlign:"center"}} >
+      return <p  key={item.name} style={{fontSize:"20px",textAlign:"justify",margin:"auto",width:"80%"}} >
       
       <span style={{fontSize:"25px"}} >{item.name} -  </span>
       <span>{item.amount} </span>
       <span>{item.unit}    ,</span>
-      </span>
+      </p>
       
     })}
     

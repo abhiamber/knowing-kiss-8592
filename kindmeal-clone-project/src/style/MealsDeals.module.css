@@ -1,6 +1,8 @@
 
 
 .card{
+    /* width: 80%; */
+    margin: auto;
 display: grid;
 grid-template-columns: repeat(3,300px);
 gap: 50px;
@@ -10,8 +12,32 @@ margin: 25px 0;
 }
 .card>div{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 80%;
 }
 
-.card>div>img:nth-child(1){
+.mainImage{
     width: 100%;
 }
+.card>div>Link>p{
+   
+
+}
+
+
+
+@media (min-width: 150px) and (max-width: 450px) {
+    .card{
+        grid-template-columns: repeat(1,300px);
+    }
+
+
+}
+
+
+
+  @media (min-width: 450px) and (max-width: 950px) {
+    .card{
+        grid-template-columns: repeat(2,300px);
+    }
+  
+  }

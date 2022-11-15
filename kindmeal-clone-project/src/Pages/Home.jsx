@@ -53,7 +53,7 @@ function Home() {
       <div className={style.posterpiece}>
         {food.map((item) => {
           return <div key={item.id}  className={style.mapData} >        
-          <img src={item.url} alt=""  />;
+          <img src={item.url} alt=""  />
           </div>
 
         })}

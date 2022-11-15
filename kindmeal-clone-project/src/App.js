@@ -18,7 +18,7 @@ function App() {
     <AllRoutes/>
     <div  className="logo2"  style={{backgroundColor:"lightgray",marginTop:"50px"}}>
 
-    <img src="https://www.kindmeal.my/images/banner_whykindmeal.png" alt="" />
+    <img src="https://www.kindmeal.my/images/banner_whykindmeal.png" alt="" width="100%" />
     </div>
 
     <Footer/>

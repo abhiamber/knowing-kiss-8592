@@ -4,10 +4,6 @@
     width: 80%;
     margin: auto;
     margin-top: 20px;
-        display: grid;
-        gap: 40px;
-        /* grid-template-columns: repeat(2,1fr); */
-        /* grid-template-rows: repeat(2,200px); */
     }
     .box{
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -17,7 +13,22 @@
         text-align: justify;
         margin:   20px 25px;
     }
-    .box>h3{
+   
+
     
-        /* margin-left: 0px; */
+@media (min-width: 150px) and (max-width: 450px) {
+    .box{
+        display: block;
     }
+
+
+}
+
+
+
+  @media (min-width: 450px) and (max-width: 950px) {
+    .box{
+        display: block;
+    }
+  
+  }
