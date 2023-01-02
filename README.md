@@ -27,14 +27,13 @@ This is a simple project. You can open this project using the above deployed lin
 
 
 2.This is Sign-up & Log-in Page
- ![SignUp Page-Page](https://i.ibb.co/sFLjT5V/Screenshot-1071.png)
- ![Login Page-Page](https://i.ibb.co/sPLgSf6/Screenshot-1072.png)
- 
- 3. This is the Admin page
-![ Admin page-Page](https://i.ibb.co/yBvs1PV/Screenshot-1074.png)
+![Screenshot (216)](https://user-images.githubusercontent.com/102507444/210265811-737d2b12-00f6-44c0-acc4-a8039c52b88a.png)
 
- 4. This is the Cart page
-![ Cart page-Page](https://i.ibb.co/84Npr0w/Screenshot-1073.png)
+ 
+
+ 3. This is the Details page
+![Screenshot (217)](https://user-images.githubusercontent.com/102507444/210265959-27c9880e-34c3-43fb-b7d0-b3b31bea271f.png)
+
 
 # Deployed website:
 [click here](kind-mealclone.netlify.app/)
