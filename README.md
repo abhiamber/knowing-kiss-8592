@@ -23,7 +23,8 @@ This is a simple project. You can open this project using the above deployed lin
 <h1>Snapshots of our project</h1>
 
 1. This is the Landing page
-![Landing home img](https://i.postimg.cc/bN0yLgLP/Screenshot-1075.png)
+![Screenshot (215)](https://user-images.githubusercontent.com/102507444/210265588-bf6a5fe7-62ae-4269-9197-bbbb0b1bdc63.png)
+
 
 2.This is Sign-up & Log-in Page
  ![SignUp Page-Page](https://i.ibb.co/sFLjT5V/Screenshot-1071.png)
